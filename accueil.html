@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Carte du Maroc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4f79d;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between; /* Espace entre le contenu et le bas */
+            align-items: center; /* Centrer tout le contenu */
+            height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
+            padding: 20px;
+        }
+
+        /* Style pour le titre */
+        h1 {
+            font-style: italic; 
+            color: #1a922e;  /* Titre en blanc */
+            margin-top: 100px; 
+        }
+
+        /* Style pour le paragraphe de bienvenue */
+        .welcome {
+            font-size: 18px;
+            color: rgb(2, 2, 2);
+            margin-top: 20px;
+            width: 80%; /* Limiter la largeur du texte */
+            text-align: center;
+        }
+
+        /* Style pour les compartiments */
+        .card-container {
+            display: flex;
+            justify-content: space-between; /* Espacement égal entre les cartes */
+            align-items: center; /* Alignement des cartes */
+            width: 80%;
+            margin-top: 40px;
+        }
+        .card {
+            background-color: #1a922e;
+            color: white;
+            text-align: center;
+            width: 23%; /* Largeur de chaque carte */
+            height: 250px; /* Hauteur égale à la largeur pour garder un carré */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card:hover {
+            transform: scale(1.05); /* Agrandir légèrement au survol */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        .description {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #f5f5f5;
+        }
+
+        /* Style pour le footer */
+        footer {
+            margin-top: auto; /* Cela pousse le footer vers le bas de la page */
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            padding: 10px 0;
+            /* Enlève la couleur de fond verte */
+            background-color: transparent; /* Retire la couleur de fond verte */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Titre de la page -->
+<h1>La Visualisation des Formats Cloud</h1>
+
+<!-- Paragraphe de bienvenue -->
+<p class="welcome">Bienvenue sur notre plateforme de visualisation des formats Cloud ! Explorez les différents formats de données géospatiales optimisés pour une expérience interactive et une analyse à grande échelle. Choisissez un format ci-dessous pour commencer.</p>
+
+<!-- Conteneur des cartes (compartiments COG, GeoParquet, Zarr, GeoJSON) -->
+<div class="card-container">
+    <!-- Carré pour la visualisation COG -->
+    <div class="card">
+        <a href="websitecog.html">COG</a>
+        <p class="description">Le format COG (Cloud Optimized GeoTIFF) permet un accès rapide aux images géospatiales stockées dans le cloud.</p>
+    </div>
+
+    <!-- Carré pour la visualisation GeoParquet -->
+    <div class="card">
+        <a href="Géoparquet.html">GeoParquet</a>
+        <p class="description">GeoParquet est un format optimisé pour les données géospatiales structurées, idéal pour les analyses à grande échelle.</p>
+    </div>
+
+    <!-- Carré pour un autre format (exemple : Zarr) -->
+    <div class="card">
+        <a href="index.html">Zarr</a>
+        <p class="description">Zarr est un format de données multidimensionnelles utilisé pour stocker des grands ensembles de données scientifiques de manière efficace.</p>
+    </div>
+
+    <!-- Carré pour GeoJSON -->
+    <div class="card">
+        <a href="Geojson.html">GeoJSON</a>
+        <p class="description">GeoJSON est un format de données basé sur JSON pour représenter des objets géographiques comme des points, des lignes et des polygones, couramment utilisé dans les applications cartographiques et SIG en raison de sa simplicité et de sa compatibilité avec divers outils web.</p>
+    </div>
+</div>
+
+<!-- Footer avec les crédits -->
+<footer>
+    Réalisé par : Hiba AIT DIK, Imane ABOUHAT, Aya CHEIKH, Ibtihal SEDDIKI et ABOU MALIK Yassir
+</footer>
+
+</body>
+</html>
